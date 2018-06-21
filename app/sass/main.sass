@@ -1,0 +1,459 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #ffffff
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+
+ul
+	list-style-type: none
+	padding: 0
+	margin: 0
+	li
+		display: inline-block
+a:hover,
+a:active,
+a:focus
+	color: #ffffff
+	text-decoration: none
+
+.header_top
+	background-position: center
+	background-image: url(../img/bg_header.png)
+	background-size: cover
+	height: 100%
+	display: block
+
+.logo
+	display: block
+	margin-top: 45px
+	color: #fff
+	font-size: 36px
+	line-height: 24px
+	font-family: "ProximaNovaBold", sans-serif
+	&:hover
+		color: #ffffff
+	span
+		font-family: "ProximaNovaLight", sans-serif
+
+
+
+
+.nav_bar
+	text-align: right
+	margin-top: 40px
+	a
+		margin: 0 20px
+		line-height: 24px
+		text-align: center
+		position: relative
+		font-family: "ProximaNovaReg", sans-serif
+		color: #ffffff
+		font-size: 18px
+		&::before
+			content: ""
+			position: absolute
+			bottom: -3px
+			height: 2px
+			background-color: #ffffff
+			background-position: center
+			width: 0%
+		&:hover::before
+			content: ""
+			width: 100%
+			transition: all .25s ease-in-out
+
+.hidden_bar
+	display: none
+	float: none
+	text-align: center
+	li
+		display: block
+		padding: 15px
+
+.content
+	text-align: center
+	padding-top: 20%
+	h1
+		font-size: 48px
+		color: #ffffff
+		font-family: "ProximaNovaReg", sans-serif
+		line-height: 36px
+	h3
+		padding-bottom: 65px
+		font-size: 18px
+		line-height: 30px
+		color: #e77732
+		font-family: "ProximaNovaReg", sans-serif
+	.button_group
+		.button
+			border: 1px solid #fff
+			float: right
+			background-color: #fff
+			border-radius: 50px
+			color: #d32721
+			font-size: 18px
+			line-height: 36px
+			padding: 10px 55px
+			transition: all .25s
+			&:hover
+				color: #ffffff
+				background-color: transparent
+				border: 1px solid #fff
+			&:active
+				color: #ffffff
+				opacity: .5
+				text-transform: none
+		.button-v
+			float: left
+			border-radius: 50px
+			border: 1px solid #e78733
+			padding: 10px 29px
+			color: #ffffff
+			transition: all .25s
+			font-size: 18px
+			line-height: 36px
+			&:hover
+				background-color: #ffffff
+				border: none
+				color: #d32721
+			&:active
+				color: #ffffff
+				opacity: .5
+				text-transform: none
+			i
+				padding-right: 18px
+
+.s_form
+	background-color: #f6f6f6
+	.dron_item
+		text-align: center
+		padding: 115px 0
+		h2
+			font-size: 30px
+			line-height: 36px
+			background: linear-gradient(160deg, #d20010, #ecbda4)
+			-webkit-background-clip: text
+			-webkit-text-fill-color: transparent
+			color: #d22522
+			font-family: "ProximaNovaBold", sans-serif
+		p
+			font-size: 18px
+			line-height: 30px
+			color: #5e6372
+			font-family: "ProximaNovaLight", sans-serif
+		img
+			height: 100px
+			width: auto
+
+.ask
+	text-align: center
+	margin-bottom: 106px
+	a
+		text-decoration: none
+
+.button_ask
+	padding: 16px 55px
+	font-size: 18px
+	line-height: 36px
+	color: #ffffff
+	background-color: #274799
+	border-radius: 30px
+	&:hover
+		background-color: #2747F1
+	&:active
+		background-color: #274779
+
+//mouse weal
+.mouse-icon
+	border: 2px
+	background-color: #eaa2a9
+	border-radius: 16px
+	height: 40px
+	width: 24px
+	z-index: 10
+	opacity: 0.7
+	display: inline-block
+	cursor: pointer
+	.wheel
+		animation-name: drop
+		animation-duration: 1s
+		animation-timing-function: linear
+		animation-delay: 0s
+		animation-iteration-count: infinite
+		animation-play-state: running
+		position: relative
+		border-radius: 10px
+		background-color: #b50c18
+		width: 2px
+		height: 7px
+		top: 4px
+		margin-left: auto
+		margin-right: auto
+
+@-webkit-keyframes drop
+	0%
+		top: 5px
+		opacity: 0
+
+	30%
+		top: 10px
+		opacity: 1
+
+	100%
+		top: 25px
+		opacity: 0
+
+@keyframes drop
+	0%
+		top: 5px
+		opacity: 0
+
+	30%
+		top: 10px
+		opacity: 1
+
+	100%
+		top: 25px
+		opacity: 0
+
+.mw-wrapper
+	text-align: center
+	padding: 13% 0
+	span
+		display: block
+		font-size: 14px
+		line-height: 18px
+		color: #db596b
+
+//Toggle Mnu
+.toggle-mnu
+	position: absolute
+	top: 0
+	right: 15px
+	display: block
+	width: 28px
+	height: 28px
+	margin-top: 45px
+	span:after, span:before
+		content: ""
+		position: absolute
+		left: 0
+		top: 9px
+	span:after
+		top: 18px
+	span
+		position: relative
+		display: block
+	span, span:after, span:before
+		width: 100%
+		height: 2px
+		background-color: #fff
+		transition: all 0.3s
+		backface-visibility: hidden
+		border-radius: 2px
+	&.on span
+		background-color: transparent
+	&.on span:before
+		transform: rotate(45deg) translate(-1px, 0px)
+	&.on span:after
+		transform: rotate(-45deg) translate(6px, -7px)
+
+////////loader//////////////
+.pre
+	background: linear-gradient(90deg, #FF4E50 10%, #F9D423 90%)
+	position: fixed
+	overflow: hidden
+	left: 0
+	top: 0
+	right: 0
+	bottom: 0
+	z-index: 100000
+	.loader
+		height: 40px
+		width: 40px
+		position: absolute
+		left: 50%
+		margin-left: -20px
+		top: 50%
+		margin-top: -20px
+		&:before,
+		&:after
+			content: ""
+			height: 40px
+			width: 40px
+			border: 8px solid rgba(255, 255, 255, .5)
+			border-radius: 10px
+			position: absolute
+			top: 0
+		&:before
+			animation: animate 2s infinite linear
+		&:after
+			animation: animate2 2s infinite linear
+
+@keyframes animate
+	100%
+		transform: rotate(180deg) skew(360deg)
+
+@keyframes animate2
+	100%
+		transform: rotate(-180deg) skew(-360deg)
+
+.s_info-content
+	ul
+		list-style-type: none
+		padding: 0
+		margin: 0
+	li
+		display: inline-block
+
+.s_info
+	margin-top: 120px
+	background: url("../img/Drone1.png") no-repeat
+	background-position: right
+	.s_info-content
+		margin-bottom: 120px
+		h1
+			font-size: 48px
+			line-height: 36px
+			background: linear-gradient(160deg, #d20010, #ecbda4)
+			-webkit-background-clip: text
+			-webkit-text-fill-color: transparent
+			color: #d22522
+			font-family: "ProximaNovaBold", sans-serif
+		h4
+			font-size: 18px
+			line-height: 36px
+			color: #5e6372
+			font-family: "ProximaNovaReg", sans-serif
+		.s_info-item
+			display: inline-flex
+			.info
+				font-size: 14px
+				line-height: 24px
+				color: #a7acbc
+				font-family: "ProximaNovaReg", sans-serif
+				margin: 10px 17px
+			.num
+				font-size: 24px
+				color: #3f4e76
+				font-family: "ProximaNovaReg", sans-serif
+				background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='100' width='100'%3E%3Ccircle cx='50' cy='50' r='40' stroke='%23c7cde0' stroke-width='3' fill='transparent' /%3E%3C/svg%3E ")
+				background-size: cover
+				background-repeat: no-repeat
+				background-position: center
+				padding: 10px 20px
+				margin-bottom: auto
+
+.s_galery
+	.col-lg-6
+		padding: 0
+	.s_item
+		width: 100%
+		background-color: #f6f6f6
+		height: 645px
+		h1
+			font-size: 48px
+			line-height: 36px
+			background: linear-gradient(160deg, #d20010, #ecbda4)
+			-webkit-background-clip: text
+			-webkit-text-fill-color: transparent
+			color: #d22522
+			font-family: "ProximaNovaBold", sans-serif
+		p
+			font-size: 18px
+			line-height: 36px
+			color: #5e6372
+			font-family: "ProximaNovaReg", sans-serif
+			padding-bottom: 60px
+	.s-right
+		padding: 180px 0 0 75px
+	.s-left
+		padding: 110px 0 0 300px
+iframe
+	width: 100%
+	height: 100%
+.video
+	height: 645px
+
+.s_mail
+	background: url("../img/bg_mail.png")
+	-webkit-background-size: cover
+	background-size: cover
+	background-position: center
+	text-align: center
+	color: #ffffff
+	h1
+		font-size: 48px
+		line-height: 36px
+		color: #fff
+		padding-top: 150px
+		padding-bottom: 50px
+		font-family: "ProximaNovaBold", sans-serif
+	.f_mail
+		padding-bottom: 190px
+		position: relative
+		display: inline-block
+		width: 396px
+		input
+			background-color: rgba(220, 84, 67, .5)
+			border-radius: 50px
+			height: 50px
+			color: #ffffff
+			border: 1px solid #dd6165
+			outline: none
+			width: 100%
+			padding-left: 33px
+			font-size: 18px
+			line-height: 36px
+			font-family: "ProximaNovaLight", sans-serif
+		button
+			position: absolute
+			top: 0
+			right: 0
+			height: 50px
+			width: 130px
+			border-radius: 30px
+			border: none
+			background-color: #ffffff
+			outline: none
+			font-size: 18px
+			line-height: 36px
+			font-family: "ProximaNovaLight", sans-serif
+			color: #d32721
+
+.map
+	height: 600px
+	width: 100%
+
+.footer
+	text-align: center
+	p
+		padding: 2% 0
+		font-size: 18px
+		line-height: 36px
+		color: #a7acbc
+		font-family: "ProximaNovaLight", sans-serif
+		a
+			font-family: "ProximaNovaBold", sans-serif
+			color: #a7acbc
+			&:hover
+				text-decoration: underline
+
+
+
+
+@import "media" // Always at the end

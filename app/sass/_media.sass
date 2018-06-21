@@ -1,0 +1,126 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+
+// ≥1200px
++media-breakpoint-down(lg)
+    .s_info
+        background: none
+    .s_galery
+        .s_item
+            height: 450px
+        .s-left
+            padding: 30px
+            text-align: right
+        .s-right
+            padding: 30px
+    .hidden
+        display: none !important
+// ≥992px
++media-breakpoint-down(md)
+    .content
+        .button_group
+            text-align: center
+            .button
+                float: none
+                line-height: 80px
+                padding: 15px 44px
+            .button-v
+                float: none
+                line-height: 80px
+                padding: 15px 30px
+
+// ≥768px
++media-breakpoint-down(sm)
+	.s_galery
+		.s_item
+			h1
+				font-size: 36px
+				line-height: 24px
+
+
+	.content
+		padding-top: 100px
+
+
+	.s_form
+		.dron_item
+			text-align: center
+			padding: 50px 0
+	.animated
+		/*CSS transitions*/
+		-o-transition-property: none !important
+		-moz-transition-property: none !important
+		-ms-transition-property: none !important
+		-webkit-transition-property: none !important
+		transition-property: none !important
+		/*CSS transforms*/
+		-o-transform: none !important
+		-moz-transform: none !important
+		-ms-transform: none !important
+		-webkit-transform: none !important
+		transform: none !important
+		/*CSS animations*/
+		-webkit-animation: none !important
+		-moz-animation: none !important
+		-o-animation: none !important
+		-ms-animation: none !important
+		animation: none !important
+// ≥576px
++media-breakpoint-down(xs)
+	.s_galery
+		.s_item
+			height: 550px
+
+	.s_mail
+		.f_mail
+			width: 250px
+			button
+				width: 85px
+	.video
+		height: 450px
+	.content
+		.button_group
+			margin-bottom: 30px
+			text-align: center
+			.button
+				width: 100%
+			.button-v
+				width: 100%
+				margin-top: 30px
+	.s_info
+		margin-top: 60px
+		.s_info-content
+			margin-bottom: 30px
+			h1
+				font-size: 30px
+				line-height: 24px
+				padding: 0 15px
+			h4
+				font-size: 14px
+				line-height: 24px
+				padding: 0 15px
+			.s_info-item
+				.info
+					line-height: 18px
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+    .hidden-sm
+        display: none !important
+// ≤768px
++media-breakpoint-up(md)
+    .hidden-md
+        display: none !important
+// ≤992px
++media-breakpoint-up(lg)
+    .hidden-lg
+        display: none !important
+// ≤1200px
++media-breakpoint-up(xl)
+    .hidden-xl
+        display: none !important
